@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <title>Изборне карте – Београд</title>
+
+    <!-- Google font (исти као на картама) -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', Arial, sans-serif;
+            background-color: #f4f6f8;
+            color: #222;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .logo {
+            max-width: 120px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #555;
+            margin-bottom: 40px;
+        }
+
+        select {
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        .buttons a {
+            display: inline-block;
+            margin: 8px;
+            padding: 10px 18px;
+            background-color: #1f3c88; /* тамно плава */
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .buttons a:hover {
+            background-color: #162d66;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ЛОГО -->
+        <img src="assets/BG_logo2.png" alt="Лого пројекта" class="logo">
+
+        <!-- НАСЛОВ -->
+        <h1>Изборне карте Београда</h1>
+        <p class="subtitle">
+            Интерактивни приказ изборних резултата по бирачким местима
+        </p>
+
+        <!-- ПАДАЈУЋИ МЕНИ ЗА КАРТЕ -->
+        <select onchange="if(this.value) window.location.href=this.value">
+            <option value="">Изаберите карту…</option>
+            <option value="maps/pobednik/index.html">Победник по бирачком месту</option>
+            <option value="maps/izlaznost/index.html">Излазност</option>
+            <option value="maps/nevazeci/index.html">Неважећи гласови</option>
+            <option value="maps/sns/index.html">СНС</option>
+            <option value="maps/sps/index.html">СПС</option>
+            <option value="maps/srs/index.html">СРС</option>
+            <option value="maps/dveri/index.html">Заветници feat. Двери</option>
+            <option value="maps/dss/index.html">НАДА</option>
+            <option value="maps/spn/index.html">Србија против насиља</option>
+            <option value="maps/mi/index.html">Ми - Глас из народа</option>
+        </select>
+
+        <!-- ДУГМАД -->
+        <div class="buttons">
+            <a href="pages/funfacts.html">Занимљиве чињенице</a>
+            <a href="pages/metodologija.html">Методологија</a>
+            <a href="pages/pitanja.html">Честа питања</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
+
