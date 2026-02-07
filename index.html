@@ -1,20 +1,19 @@
 <!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <link rel="stylesheet" href="css/leaflet.css">
-    <link rel="stylesheet" href="css/L.Control.Layers.Tree.css">
-    <link rel="stylesheet" href="css/qgis2web.css">
-    <link rel="stylesheet" href="css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="css/leaflet.photon.css">
-    <link rel="stylesheet" href="css/leaflet-measure.css">
-    <style>
-        html,
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="css/leaflet.css">
+        <link rel="stylesheet" href="css/L.Control.Layers.Tree.css">
+        <link rel="stylesheet" href="css/qgis2web.css">
+        <link rel="stylesheet" href="css/fontawesome-all.min.css">
+        <link rel="stylesheet" href="css/leaflet.photon.css">
+        <link rel="stylesheet" href="css/leaflet-measure.css">
+        <style>
+         html,
         body {
             font-family: 'Roboto', sans-serif;
         }
@@ -152,7 +151,6 @@
             background-color: #274c77;
             transform: translateY(-1px);
         }
-
         @media (max-width: 768px) {
 
             body {
@@ -185,9 +183,8 @@
         #menu-toggle {
             display: none;
             position: fixed;
-            top: 12px;
-            right: 12px;
-            left: auto;
+            top: 15px;
+            left: 15px;
             z-index: 1100;
             background: #002654;
             color: white;
@@ -202,14 +199,12 @@
                 display: block;
             }
         }
-    </style>
-    <title></title>
-</head>
-
-<body>
-    <button id="menu-toggle">☰</button>
-
-    <div id="container">
+        </style>
+        <title></title>
+    </head>
+    <body>
+        <button id="menu-toggle">☰</button>
+        <div id="container">
 
         <div id="sidebar">
             <div class="sidebar-header">
@@ -218,29 +213,24 @@
 
             <h2>Изборне карте</h2>
             <p>Проценат освојених гласова на парламентарним изборима 2023. по бирачким местима изборне листе:<br>
-                <span class="party-name">Др Милош Јовановић - НАДА за Србију</span>
+                <span class="party-name">Милица Ђурђевић Стаменковски - Бошко Обрадовић - Национално окупљање - Државотворна снага - Српска странка Заветници - Српски покрет Двери</span>
             </p>
             <div class="legend">
                 <h4>Легенда</h4>
 
                 <div class="legend-item">
-                    <span class="legend-color" style="background:#f7fbff;"></span>
+                    <span class="legend-color" style="background:#fff5f0;"></span>
                     <span>0–3 %</span>
                 </div>
 
                 <div class="legend-item">
-                    <span class="legend-color" style="background:#afd1e7;"></span>
+                    <span class="legend-color" style="background:#fb7050;"></span>
                     <span>3–5 %</span>
                 </div>
 
                 <div class="legend-item">
-                    <span class="legend-color" style="background:#3e8ec4;"></span>
-                    <span>5-10 %</span>
-                </div>
-
-                <div class="legend-item">
-                    <span class="legend-color" style="background:#08306b;"></span>
-                    <span>>10 %</span>
+                    <span class="legend-color" style="background:#67000d;"></span>
+                    <span>>5 %</span>
                 </div>
             </div>
 
@@ -282,40 +272,39 @@
             document.getElementById("sidebar").classList.toggle("active");
         };
     </script>
-
-    <script src="js/qgis2web_expressions.js"></script>
-    <script src="js/leaflet.js"></script>
-    <script src="js/L.Control.Layers.Tree.min.js"></script>
-    <script src="js/leaflet.rotatedMarker.js"></script>
-    <script src="js/leaflet.pattern.js"></script>
-    <script src="js/leaflet-hash.js"></script>
-    <script src="js/Autolinker.min.js"></script>
-    <script src="js/rbush.min.js"></script>
-    <script src="js/labelgun.min.js"></script>
-    <script src="js/labels.js"></script>
-    <script src="js/leaflet.photon.js"></script>
-    <script src="js/leaflet-measure.js"></script>
-    <script src="data/BG_jedini_pravi_1.js"></script>
-    <script>
+        <script src="js/qgis2web_expressions.js"></script>
+        <script src="js/leaflet.js"></script>
+        <script src="js/L.Control.Layers.Tree.min.js"></script>
+        <script src="js/leaflet.rotatedMarker.js"></script>
+        <script src="js/leaflet.pattern.js"></script>
+        <script src="js/leaflet-hash.js"></script>
+        <script src="js/Autolinker.min.js"></script>
+        <script src="js/rbush.min.js"></script>
+        <script src="js/labelgun.min.js"></script>
+        <script src="js/labels.js"></script>
+        <script src="js/leaflet.photon.js"></script>
+        <script src="js/leaflet-measure.js"></script>
+        <script src="data/BG_jedini_pravi_1.js"></script>
+        <script>
         var map = L.map('map', {
-            zoomControl: false, maxZoom: 19, minZoom: 1
-        }).fitBounds([[44.620261238679525, 20.06392334684394], [44.90011642890429, 20.705903286605718]]);
+            zoomControl:false, maxZoom:19, minZoom:1
+        }).fitBounds([[44.47236983042717,19.766837531608783],[45.03215205376837,21.05079741113234]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
-        var autolinker = new Autolinker({ truncate: { length: 30, location: 'smart' } });
+        var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
         // remove popup's row if "visible-with-data"
         function removeEmptyRowsFromPopupContent(content, feature) {
-            var tempDiv = document.createElement('div');
-            tempDiv.innerHTML = content;
-            var rows = tempDiv.querySelectorAll('tr');
-            for (var i = 0; i < rows.length; i++) {
-                var td = rows[i].querySelector('td.visible-with-data');
-                var key = td ? td.id : '';
-                if (td && td.classList.contains('visible-with-data') && feature.properties[key] == null) {
-                    rows[i].parentNode.removeChild(rows[i]);
-                }
-            }
-            return tempDiv.innerHTML;
+         var tempDiv = document.createElement('div');
+         tempDiv.innerHTML = content;
+         var rows = tempDiv.querySelectorAll('tr');
+         for (var i = 0; i < rows.length; i++) {
+             var td = rows[i].querySelector('td.visible-with-data');
+             var key = td ? td.id : '';
+             if (td && td.classList.contains('visible-with-data') && feature.properties[key] == null) {
+                 rows[i].parentNode.removeChild(rows[i]);
+             }
+         }
+         return tempDiv.innerHTML;
         }
         // modify popup if contains media
         function addClassToPopupIfMedia(content, popup) {
@@ -326,7 +315,7 @@
                 var src = imgTd.getAttribute('src');
                 if (/\.(jpg|jpeg|png|gif|bmp|webp|avif)$/i.test(src)) {
                     popup._contentNode.classList.add('media');
-                    setTimeout(function () {
+                    setTimeout(function() {
                         popup.update();
                     }, 10);
                 } else if (/\.(mp3|wav|ogg|aac)$/i.test(src)) {
@@ -335,7 +324,7 @@
                     audio.src = src;
                     imgTd.parentNode.replaceChild(audio, imgTd);
                     popup._contentNode.classList.add('media');
-                    setTimeout(function () {
+                    setTimeout(function() {
                         popup.setContent(tempDiv.innerHTML);
                         popup.update();
                     }, 10);
@@ -350,10 +339,10 @@
                     imgTd.parentNode.replaceChild(video, imgTd);
                     popup._contentNode.classList.add('media');
                     // Aggiorna il popup quando il video carica i metadati
-                    video.addEventListener('loadedmetadata', function () {
+                    video.addEventListener('loadedmetadata', function() {
                         popup.update();
                     });
-                    setTimeout(function () {
+                    setTimeout(function() {
                         popup.setContent(tempDiv.innerHTML);
                         popup.update();
                     }, 10);
@@ -412,81 +401,66 @@
                         <td>' + (feature.properties['ADRESA_BM'] !== null ? autolinker.link(String(feature.properties['ADRESA_BM']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">NADA</th>\
-                        <td>' + (feature.properties['NADA'] !== null ? autolinker.link(String(feature.properties['NADA']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <th scope="row">Dveri_Zav</th>\
+                        <td>' + (feature.properties['Dveri_Zav'] !== null ? autolinker.link(String(feature.properties['Dveri_Zav']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">NADA_udeo</th>\
-                        <td>' + (feature.properties['NADA_udeo'] !== null ? autolinker.link(String(feature.properties['NADA_udeo']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <th scope="row">Dveri_udeo</th>\
+                        <td>' + (feature.properties['Dveri_udeo'] !== null ? autolinker.link(String(feature.properties['Dveri_udeo']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
-            layer.on('popupopen', function (e) {
-                addClassToPopupIfMedia(content, e.popup);
-            });
-            layer.bindPopup(content, { maxHeight: 400 });
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
         }
 
         function style_BG_jedini_pravi_1_0(feature) {
-            if (feature.properties['NADA_udeo'] >= 0.000000 && feature.properties['NADA_udeo'] <= 3.000000) {
+            if (feature.properties['Dveri_udeo'] >= 0.000000 && feature.properties['Dveri_udeo'] <= 3.000000 ) {
                 return {
-                    pane: 'pane_BG_jedini_pravi_1',
-                    opacity: 1,
-                    color: 'rgba(35,35,35,1.0)',
-                    dashArray: '',
-                    lineCap: 'butt',
-                    lineJoin: 'miter',
-                    weight: 1.0,
-                    fill: true,
-                    fillOpacity: 1,
-                    fillColor: 'rgba(247,251,255,0.5019607843137255)',
-                    interactive: true,
-                }
+                pane: 'pane_BG_jedini_pravi_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(255,245,240,0.5019607843137255)',
+                interactive: true,
             }
-            if (feature.properties['NADA_udeo'] >= 3.000000 && feature.properties['NADA_udeo'] <= 5.000000) {
-                return {
-                    pane: 'pane_BG_jedini_pravi_1',
-                    opacity: 1,
-                    color: 'rgba(35,35,35,1.0)',
-                    dashArray: '',
-                    lineCap: 'butt',
-                    lineJoin: 'miter',
-                    weight: 1.0,
-                    fill: true,
-                    fillOpacity: 1,
-                    fillColor: 'rgba(175,209,231,0.5019607843137255)',
-                    interactive: true,
-                }
             }
-            if (feature.properties['NADA_udeo'] >= 5.000000 && feature.properties['NADA_udeo'] <= 10.000000) {
+            if (feature.properties['Dveri_udeo'] >= 3.000000 && feature.properties['Dveri_udeo'] <= 5.000000 ) {
                 return {
-                    pane: 'pane_BG_jedini_pravi_1',
-                    opacity: 1,
-                    color: 'rgba(35,35,35,1.0)',
-                    dashArray: '',
-                    lineCap: 'butt',
-                    lineJoin: 'miter',
-                    weight: 1.0,
-                    fill: true,
-                    fillOpacity: 1,
-                    fillColor: 'rgba(62,142,196,0.5019607843137255)',
-                    interactive: true,
-                }
+                pane: 'pane_BG_jedini_pravi_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(251,112,80,0.5019607843137255)',
+                interactive: true,
             }
-            if (feature.properties['NADA_udeo'] >= 10.000000 && feature.properties['NADA_udeo'] <= 15.000000) {
+            }
+            if (feature.properties['Dveri_udeo'] >= 5.000000 && feature.properties['Dveri_udeo'] <= 10.000000 ) {
                 return {
-                    pane: 'pane_BG_jedini_pravi_1',
-                    opacity: 1,
-                    color: 'rgba(35,35,35,1.0)',
-                    dashArray: '',
-                    lineCap: 'butt',
-                    lineJoin: 'miter',
-                    weight: 1.0,
-                    fill: true,
-                    fillOpacity: 1,
-                    fillColor: 'rgba(8,48,107,0.5019607843137255)',
-                    interactive: true,
-                }
+                pane: 'pane_BG_jedini_pravi_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(103,0,13,0.5019607843137255)',
+                interactive: true,
+            }
             }
         }
         map.createPane('pane_BG_jedini_pravi_1');
@@ -503,10 +477,8 @@
         });
         bounds_group.addLayer(layer_BG_jedini_pravi_1);
         map.addLayer(layer_BG_jedini_pravi_1);
-        const url = {
-            "Nominatim OSM": "https://nominatim.openstreetmap.org/search?format=geojson&addressdetails=1&",
-            "France BAN": "https://api-adresse.data.gouv.fr/search/?"
-        }
+        const url = {"Nominatim OSM": "https://nominatim.openstreetmap.org/search?format=geojson&addressdetails=1&",
+        "France BAN": "https://api-adresse.data.gouv.fr/search/?"}
         var photonControl = L.control.photon({
             url: url["Nominatim OSM"],
             feedbackLabel: '',
@@ -515,14 +487,14 @@
             initial: true,
             // resultsHandler: myHandler,
         }).addTo(map);
-        photonControl._container.childNodes[0].style.borderRadius = "10px"
+        photonControl._container.childNodes[0].style.borderRadius="10px"
         // Create a variable to store the geoJSON data
         var x = null;
         // Create a variable to store the marker
         var marker = null;
         // Add an event listener to the Photon control to create a marker from the returned geoJSON data
         var z = null;
-        photonControl.on('selected', function (e) {
+        photonControl.on('selected', function(e) {
             console.log(photonControl.search.resultsContainer);
             if (x != null) {
                 map.removeLayer(obj3.marker);
@@ -533,14 +505,14 @@
             var label = typeof obj2.gcd.properties.label === 'undefined' ? obj2.gcd.properties.display_name : obj2.gcd.properties.label;
             obj3.marker = L.marker(x.getLayers()[0].getLatLng()).bindPopup(label).addTo(map);
             map.setView(x.getLayers()[0].getLatLng(), 17);
-            z = typeof e.choice.properties.label === 'undefined' ? e.choice.properties.display_name : e.choice.properties.label;
+            z = typeof e.choice.properties.label === 'undefined'? e.choice.properties.display_name : e.choice.properties.label;
             console.log(e);
             e.target.input.value = z;
         });
         var search = document.getElementsByClassName("leaflet-photon leaflet-control")[0];
         search.classList.add("leaflet-control-search")
         search.style.display = "flex";
-        search.style.backgroundColor = "rgba(255,255,255,0.5)"
+        search.style.backgroundColor="rgba(255,255,255,0.5)" 
 
         // Create the new button element
         var button = document.createElement("div");
@@ -559,7 +531,6 @@
             }
         });
         setBounds();
-    </script>
-</body>
-
+        </script>        
+    </body>
 </html>
